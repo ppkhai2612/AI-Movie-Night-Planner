@@ -99,7 +99,7 @@ spark = SparkSession.builder.getOrCreate()
 # clearly at CREATE SCHEMA on the next line.
 try:
     spark.sql(f"CREATE CATALOG IF NOT EXISTS {CATALOG}")
-except Exception as exc:  # noqa: BLE001
+except Exception as exc:
     print(
         f"Could not create catalog {CATALOG!r} (this is normal if it "
         f"already exists): {str(exc).splitlines()[0]}"
